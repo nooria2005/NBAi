@@ -2,7 +2,7 @@
 
 Created by: Baheer Noori and Omer Gafar
 
-                                                      Overview:
+                                                    Overview:
                                                     
   NBAi is an innovative platform designed for sports enthusiasts to stay ahead of the competition with a variety of features. 
 It allows users to track accurate, real-time data on NBA teams and players as the season progresses. NBAi utilizes advanced 
