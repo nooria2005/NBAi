@@ -1,7 +1,6 @@
 .header {
-    background-color: rgb(239, 90, 36); /* Set the background color to red */
-    color: black; /* Optional: Change text color for contrast */
-    margin: 0; /* Optional: Remove default margin */
-    padding: 10px; /* Optional: Add padding */
+    background-color: rgb(239, 90, 36);
+    color: black;
+    padding: 10px;
 }
 
