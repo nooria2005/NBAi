@@ -96,4 +96,15 @@ import { useSelector } from "react-redux";
       color="transparent"
       className="flex flex-col gap-4 rounded-none md:flex-row md:items-center"
     >
-        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorem libero voluptates, quis accusamus iste.
+            </Typography>
+          </div>
+        </CardHeader>
+        <CardBody className="px-2 pb-0 ">
+          <Chart {...chartConfig} />
+        </CardBody>
+      </Card>
+    )
+  }
+  
+  export default BarChart
