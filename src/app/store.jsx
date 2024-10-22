@@ -25,3 +25,15 @@ const store = configureStore({
     playerAuth: persistedReducer, // Renamed to playerAuth
     gameStats: gameStatsReducer, // Renamed for game statistics
   },
+
+  devTools: process.env.NODE_ENV !== "production", // Fixed typo from Node_ENV to NODE_ENV
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+});
+
+export const persistor = persistStore(store);
+export default store;
