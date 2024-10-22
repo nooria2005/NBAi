@@ -20,3 +20,22 @@ import { useSelector } from "react-redux";
             data: totalPurchases,
           },
         ],
+    options: {
+      chart: {
+        toolbar: {
+          show: false,
+        },
+      },
+      title: {
+        show: "",
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      colors: ["#ABFB60"],
+      plotOptions: {
+        bar: {
+          columnWidth: "40%",
+          borderRadius: 2,
+        },
+      },
