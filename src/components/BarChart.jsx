@@ -39,3 +39,30 @@ import { useSelector } from "react-redux";
           borderRadius: 2,
         },
       },
+      xaxis: {
+        axisTicks: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+        labels: {
+          style: {
+            colors: "#616161",
+            fontSize: "12px",
+            fontFamily: "inherit",
+            fontWeight: 400,
+          },
+        },
+        categories: date,
+      },
+      yaxis: {
+        labels: {
+          style: {
+            colors: "#616161",
+            fontSize: "12px",
+            fontFamily: "inherit",
+            fontWeight: 400,
+          },
+        },
+      },
