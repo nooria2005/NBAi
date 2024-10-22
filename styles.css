@@ -11,8 +11,6 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
 }
 
 /* Header Styling */
@@ -24,18 +22,17 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.header p {
-    font-size: 1.2em;
+/* Logo Styling */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .logo img {
-    max-width: 50px;
-    margin-bottom: 10px;
+    max-width: 200px; /* Adjust the size of the logo */
+    height: auto;
 }
 
 /* Navbar Styling */
