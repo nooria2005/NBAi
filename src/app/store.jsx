@@ -17,3 +17,11 @@ const persistConfig = {
   key: "nba_root", // Changed to indicate it's for the NBA
   storage,
 };
+
+const persistedReducer = persistReducer(persistConfig, playerAuthReducer);
+
+const store = configureStore({
+  reducer: {
+    playerAuth: persistedReducer, // Renamed to playerAuth
+    gameStats: gameStatsReducer, // Renamed for game statistics
+  },
