@@ -88,3 +88,12 @@ import { useSelector } from "react-redux";
       },
     },
   };
+  return (
+    <Card className="shadow-lg flex-1">
+    <CardHeader
+      floated={false}
+      shadow={false}
+      color="transparent"
+      className="flex flex-col gap-4 rounded-none md:flex-row md:items-center"
+    >
+        
