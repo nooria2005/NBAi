@@ -11,3 +11,9 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+
+const persistConfig = {
+  key: "nba_root", // Changed to indicate it's for the NBA
+  storage,
+};
