@@ -121,6 +121,19 @@ body {
     color: #333;
 }
 
+/* Contact Section */
+.contact {
+    padding: 40px;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2em;
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+
 /* Footer */
 .footer {
     background-color: #333;
