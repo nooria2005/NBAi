@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Chatbot | NBAi</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Chatbot styling */
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-box {
+            height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            padding: 8px;
+            margin: 5px 0;
+            background-color: #ff5722;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .bot-message {
+            background-color: #007bff;
+        }
+
+        .input-container {
+            display: flex;
+        }
+
+        .input-container input {
+            flex-grow: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .input-container button {
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>NBA Chatbot</h1>
+        <p>Your AI companion for NBA stats, updates, and more.</p>
+    </header>
+
+    <section class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <!-- Messages will appear here -->
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Ask me anything about NBA...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="nba-chatbot.html">Back to NBA Chatbot</a>
+        <br>
+        <a href="index.html">Back to Home</a>
+    </footer>
+
+    <script>
+        // Function to send a message to the Flask backend
+        function sendMessage() {
+            const userMessage = document.getElementById('user-input').value;
+            if (!userMessage) return;
+
+            // Display user message in the chatbox
+            appendMessage('user', userMessage);
+
+            // Send message to Flask backend
+            fetch('http://http://127.0.0.1:5000', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: userMessage })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const botMessage = data.response || 'Sorry, I did not understand that.';
+                appendMessage('bot', botMessage);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                appendMessage('bot', 'Oops! Something went wrong.');
+            });
+
+            // Clear the input field
+            document.getElementById('user-input').value = '';
+        }
+
+        // Function to append messages to the chatbox
+        function appendMessage(sender, message) {
+            const chatBox = document.getElementById('chat-box');
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message');
+            if (sender === 'bot') {
+                messageElement.classList.add('bot-message');
+            }
+            messageElement.textContent = message;
+            chatBox.appendChild(messageElement);
+
+            // Scroll to the bottom of the chatbox
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+</html>
