@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Comparisons | NBAi</title>
+    <title>K-Nearest Neighbors Analysis | NBAi</title>
     <link rel="stylesheet" href="../resources/styles.css">
     <style>
-        /* Centering content on the Player Performance page */
         body {
             text-align: center;
             padding: 20px;
@@ -44,23 +43,21 @@
 
 <body>
     <header class="header">
-        <h1>Team Comparisons</h1>
-        <p>Compare team stats to see how they match up against each other.</p>
+        <h1>K-Nearest Neighbors Analysis</h1>
+        <p>Explore the use of K-Nearest Neighbors for NBA predictions.</p>
     </header>
 
     <section class="content">
-        <h2>How Team Comparisons Help You</h2>
-        <p>Team Comparisons allow you to:
-            <ul>
-                <li>Analyze key team statistics such as points per game (PPG), rebounds, assists, and more.</li>
-                <li>Compare offensive and defensive ratings between teams.</li>
-                <li>Understand match-up strengths and weaknesses for upcoming games.</li>
-            </ul>
-        </p>
-        <h3>Benefits to the User</h3>
-        <p>
-            This feature is perfect for anyone looking to dive deeper into the data behind team performance. Compare your favorite team to its competitors, or scout future matchups to see where the teams excel or fall short.
-        </p>
+        <h2>Overview</h2>
+        <p>K-Nearest Neighbors (KNN) is a simple algorithm that classifies data points based on their proximity to labeled examples. It helps analyze NBA outcomes by finding the most similar games.</p>
+
+        <h2>Graphs and Analysis</h2>
+        <ul>
+            <p>This model is a non-parametric, supervised learning classifier which will make a prediction based on the "nearest neighbor" datapoints. 
+                The assumption is that the other most-similar datapoints will likely have the same outcome as the datapoint in question. After some trial and error, 
+                I determined that the best performing models had a relatively high number of n_neighbors, which is reflected in the parameter grid.</p>
+
+        </ul>
     </section>
 
     <footer class="footer">

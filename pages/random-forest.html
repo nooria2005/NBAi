@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Forest Analysis | NBAi</title>
+    <link rel="stylesheet" href="../resources/styles.css">
+    <style>
+        body {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2, .content h3 {
+            color: #ff5722;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Random Forest Analysis</h1>
+        <p>Explore the use of Random Forest for NBA predictions.</p>
+    </header>
+
+    <section class="content">
+        <h2>Overview</h2>
+        <p>Random Forest is an ensemble learning method that constructs multiple decision trees and merges them for a more accurate and stable prediction. It is particularly effective for classification tasks in NBA data.</p>
+
+        <h2>Graphs and Analysis</h2>
+        <ul>
+            <p>The Random Forest model (rfc_4F_10) shows strong performance with slightly better test scores compared to other models. 
+                However, the confusion matrix indicates an imbalance in predicting the two classes, with more errors in identifying the minority class (0). 
+                This might be addressed by tuning hyperparameters further or using techniques to handle class imbalance (e.g., oversampling or adjusting class weights).</p>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <a href="../index.html">Back to Home</a>
+    </footer>
+</body>
+
+</html>
