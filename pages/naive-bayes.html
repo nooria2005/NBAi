@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Models Analysis | NBAi</title>
+    <link rel="stylesheet" href="../resources/styles.css">
+    <style>
+        /* Centering content on the All Models page */
+        body {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2, .content h3 {
+            color: #ff5722;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        .model-section {
+            margin-bottom: 40px;
+        }
+
+        .model-section h3 {
+            margin-top: 20px;
+        }
+
+        .graphs {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>All Models Analysis</h1>
+        <p>Explore the in-depth analysis and metrics of all machine learning models used in NBA predictions.</p>
+    </header>
+
+    <section class="content">
+        <!-- Logistic Regression -->
+        <div class="model-section">
+            <h2>Logistic Regression</h2>
+            <p>This model uses logistic regression to predict NBA outcomes based on game statistics.</p>
+            <div class="graphs">
+                <ul>
+                    <li><a href="graphs/accuracy_confusion_logistic.png" target="_blank">Accuracy and Confusion Matrix</a></li>
+                    <li><a href="graphs/feature_importance_logistic.png" target="_blank">Feature Importance</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Random Forest -->
+        <div class="model-section">
+            <h2>Random Forest</h2>
+            <p>The Random Forest model evaluates team performance by aggregating predictions from multiple decision trees.</p>
+            <div class="graphs">
+                <ul>
+                    <li><a href="graphs/accuracy_confusion_rf.png" target="_blank">Accuracy and Confusion Matrix</a></li>
+                    <li><a href="graphs/feature_importance_rf.png" target="_blank">Feature Importance</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- K-Nearest Neighbors -->
+        <div class="model-section">
+            <h2>K-Nearest Neighbors</h2>
+            <p>This model classifies NBA outcomes by comparing new data points to the closest neighbors in the dataset.</p>
+            <div class="graphs">
+                <ul>
+                    <li><a href="graphs/accuracy_confusion_knn.png" target="_blank">Accuracy and Confusion Matrix</a></li>
+                    <li><a href="graphs/feature_importance_knn.png" target="_blank">Feature Importance</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Naive Bayes -->
+        <div class="model-section">
+            <h2>Naive Bayes</h2>
+            <p>A probabilistic model that applies Bayes' theorem with strong independence assumptions to predict outcomes.</p>
+            <div class="graphs">
+                <ul>
+                    <li><a href="graphs/accuracy_confusion_naive.png" target="_blank">Accuracy and Confusion Matrix</a></li>
+                    <li><a href="graphs/feature_importance_naive.png" target="_blank">Feature Importance</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Support Vector Machine -->
+        <div class="model-section">
+            <h2>Support Vector Machine</h2>
+            <p>This model separates NBA data points using hyperplanes for classification tasks.</p>
+            <div class="graphs">
+                <ul>
+                    <li><a href="graphs/accuracy_confusion_svm.png" target="_blank">Accuracy and Confusion Matrix</a></li>
+                    <li><a href="graphs/feature_importance_svm.png" target="_blank">Feature Importance</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Neural Network -->
+        <div class="model-section">
+            <h2>Neural Network</h2>
+            <p>The Neural Network model mimics human brain processes to identify patterns in NBA game data.</p>
+            <div class="graphs">
+                <ul>
+                    <li><a href="graphs/accuracy_confusion_nn.png" target="_blank">Accuracy and Confusion Matrix</a></li>
+                    <li><a href="graphs/feature_importance_nn.png" target="_blank">Feature Importance</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="../index.html">Back to Home</a>
+    </footer>
+</body>
+
+</html>
