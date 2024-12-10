@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources for Prediction Model | NBAi</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Centering content on the Resources page */
+        body {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2, .content h3 {
+            color: #ff5722;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        .more-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .more-link:hover {
+            background-color: #ff784e;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Resources for Prediction Model</h1>
+        <p>Explore the tools and datasets used to build the NBA Prediction System.</p>
+    </header>
+
+    <section class="content">
+        <h2>Key Resources</h2>
+        <p>The prediction model utilizes a combination of tools, libraries, and data sources to deliver accurate predictions. Below is a breakdown of the resources:</p>
+        <ul>
+            <li><strong>CSV Files of Player and Team Stats:</strong> Historical data including player performance metrics, team scores, and game results. Data is pre-processed and analyzed to identify trends and patterns.</li>
+            <li><strong>Jupyter Notebook:</strong> An interactive environment for running Python code, visualizing data, and building the prediction model step by step.</li>
+            <li><strong>Pandas Library:</strong> Used for data manipulation and analysis, including cleaning datasets, merging tables, and generating insightful summaries.</li>
+            <li><strong>SQL Database:</strong> A structured database for storing and querying large volumes of NBA stats and related metadata efficiently.</li>
+            <li><strong>Matplotlib and Seaborn:</strong> Visualization libraries used for plotting trends, distributions, and correlations within the dataset.</li>
+            <li><strong>Machine Learning Libraries:</strong> Scikit-learn and TensorFlow (or PyTorch) for building and training predictive models based on historical data.</li>
+        </ul>
+
+        <h3>Workflow Summary</h3>
+        <p>The process involves collecting data in CSV format, storing it in a SQL database for structured access, and using Jupyter Notebook with Python libraries (Pandas, Scikit-learn, etc.) to analyze and model predictions. Visualizations are created to help identify patterns, while machine learning algorithms are trained to predict future outcomes.</p>
+
+        <h3>Downloadable Resources</h3>
+        <p>
+            Access some of the raw datasets and starter notebooks below:
+        </p>
+        <ul>
+            <li><a href="datasets/player_stats.csv" download>Player Stats CSV</a></li>
+            <li><a href="datasets/team_stats.csv" download>Team Stats CSV</a></li>
+            <li><a href="notebooks/prediction_model.ipynb" download>Jupyter Notebook (Prediction Model)</a></li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <a href="index.html">Back to Home</a>
+    </footer>
+</body>
+
+</html>
