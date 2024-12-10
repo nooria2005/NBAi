@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBAi | Prediction System Results</title>
+    <link rel="stylesheet" href="../resources/styles.css">
+    <style>
+        /* Page styling to match the theme */
+        body {
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            text-align: left;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        header img {
+            max-width: 150px;
+        }
+
+        h1, h2 {
+            color: #ff5722;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .content p {
+            margin: 0 0 10px;
+        }
+
+        .content img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        footer a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="../resources/nbai-high-resolution-logo-transparent.png" alt="NBAi Logo">
+        <h1>Prediction System Results</h1>
+        <p>Learn about the results of our machine learning testing and evaluation process.</p>
+    </header>
+
+    <section>
+        <h2>Model Selection</h2>
+        <p>We tested various machine learning models to identify the best performing ones for predicting NBA game outcomes:</p>
+        <ul>
+            <li>Logistic Regression (LR)</li>
+            <li>K-Nearest Neighbors (KNN)</li>
+            <li>Random Forest (RF)</li>
+            <li>Gaussian Naive-Bayes (GNB)</li>
+            <li>Support Vector Machines (SVC)</li>
+            <li>Neural Network (NN)</li>
+            <li>Elo Rating System</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Results</h2>
+        <div class="content">
+            <div>
+                <h3>Top Performing Models</h3>
+                <p>The models that achieved the highest accuracy were:</p>
+                <ul>
+                    <li>Elo Rating System: 65.3% accuracy</li>
+                    <li>Gaussian Naive-Bayes (GNB): 63.5% accuracy</li>
+                    <li>Random Forest Classifier (RFC): 63.2% accuracy</li>
+                </ul>
+                <h3>Dataset Insights</h3>
+                <p>The top-performing dataset was the <strong>20-game Four Factors dataset</strong>, which provided consistent and detailed input data for training and evaluation.</p>
+            </div>
+            <div>
+                <h3>Model Comparison</h3>
+                <p>Accuracy across the tested models ranged between <strong>57% to 65%</strong>. Interestingly, error rates were higher during the first half of the season, likely due to team adjustments and incomplete data.</p>
+                <img src="../uploads/model_comparison.png" alt="Model Comparison Graph">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Feature Selection</h2>
+        <p>High feature counts led to increased accuracy despite collinearity among some stats:</p>
+        <ul>
+            <li>Shooting and scoring stats showed significant correlations.</li>
+            <li>Rebounding stats required careful handling due to overlap with other metrics.</li>
+        </ul>
+        <img src="../uploads/feature_selection.png" alt="Feature Selection Graph">
+    </section>
+
+    <section>
+        <h2>Next Steps</h2>
+        <p>While the project successfully identified promising models, it fell short of the original accuracy goal of 68%. Future improvements will focus on:</p>
+        <ul>
+            <li>Extensive data collection for broader training datasets.</li>
+            <li>Player-specific aggregated data for deeper insights.</li>
+            <li>Further adjustments to model parameters and feature selection.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <a href="../index.html">Back to Home</a>
+    </footer>
+</body>
+
+</html>
